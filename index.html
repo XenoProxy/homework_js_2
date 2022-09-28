@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2 homework</title>
+</head>
+<body>
+    <script>
+        let name = prompt('Как вас зовут?', '');
+        let age = prompt('Сколько вам лет?', '');
+        let city = prompt('Где вы живёте?', '');
+        let phone = prompt('Ваш номер телефона?', '');
+        let email = prompt('Ваш email?', '');
+        let company = prompt('Где вы работаете?', '');   
+        
+        //1
+        console.log(`Меня зовут ${name}. Мне ${age} лет.
+            Я проживаю в городе ${city} и работаю в компании ${company}.
+            Мои контактные данные: ${phone}, ${email}.` + '\n');
+
+        //2
+        console.log(`${name} родился в ${2022 - age} году.`);
+
+        //3
+        let str = prompt('6-значное число');
+        ((+str[0] + +str[1] + +str[2]) == (+str[3] + +str[4] + +str[5])) ? console.log(`да`) : console.log(`нет`);
+        
+        //4 - Вариант 1
+        let a = prompt('Введите число');
+        (a => 0) ? console.log(`верно`) : console.log(`неверно`);
+ 
+        //4 -Вариант 2
+        let message = (a > 0) ? console.log(`верно`) :
+                      (a < 0) ? console.log(`неверно`) :
+                      console.log(`число равно 0`);
+
+        5
+        let c = 10,
+            b = 2
+
+        let sum = c + b;
+        console.log(c + b);
+        console.log(c - b);
+        console.log(c * b);
+        console.log(c / b);
+
+        if (sum > 1){
+            console.log(Math.pow(sum, 2));
+        };
+
+        //6
+        if ((c > 2 && c < 11) || (b >= 6 || b < 14)){
+            console.log(`верно`);
+        } else {
+            console.log(`неверно`);
+        }
+
+        //7
+        let n = prompt('Введите число от 0 до 59');
+        while (n < 0 || n > 59){
+            n = prompt('Число меньше 0 или больше 59. Повторите ввод');
+        }
+
+        if (n <= 15){
+            console.log(`Первая четверть`);
+        } else if (n > 15 && n <= 30){
+            console.log(`Вторая четверть`);
+        } else if (n > 30 && n <= 45){
+            console.log(`Третья четверть`);
+        } else{
+            console.log(`Четвертая четверть`);
+        }
+
+        //8
+        let day = prompt('Введите число от 1 до 31');
+        while (day < 1 || day > 31){
+            day = prompt('Число меньше 1 или больше 31. Повторите ввод');
+        } 
+
+        if (day <= 10){
+            console.log(`Первая декада`);
+        } else if (day > 10 && day <= 20){
+            console.log(`Вторая декада`);
+        } else{
+            console.log(`Третья декада`);
+        }
+
+        //9
+        let days = prompt('Введите число больше 0');
+        while (days < 1){
+            days = prompt('Число меньше не может быть меньше 0. Повторите ввод');
+        }
+        (days < 365) ? console.log(`Меньше года`) : console.log(days / 365);
+        (days < 31) ? console.log(`Меньше месяца`) : console.log(days / 31);
+        (days < 7) ? console.log(`Меньше недели`) : console.log(days / 7);
+
+        //10
+        switch (day){
+            case (day > 330 && day <= 365):
+                console.log(`Декабрь`);
+                console.log(`Зима`);
+                break;
+            case (day <= 30):
+                console.log(`Январь`);
+                console.log(`Зима`);
+                break;
+            case (day > 30 && day <= 60):
+                console.log(`Февраль`);
+                console.log(`Зима`);
+                break;
+            case (day > 60 && day <= 90):
+                console.log(`Март`);
+                console.log(`Весна`);
+                break;
+            case (day > 90 && day <= 120):
+                console.log(`Апрель`);
+                console.log(`Весна`);
+                break;
+            case (day > 120 && day <= 150):
+                console.log(`Май`);
+                console.log(`Весна`);
+                break;
+            case (day > 150 && day <= 180):
+                console.log(`Июнь`);
+                console.log(`Лето`);
+                break;
+            case (day > 180 && day <= 210):
+                console.log(`Июль`);
+                console.log(`Лето`);
+                break;
+            case (day > 210 && day <= 240):
+                console.log(`Август`);
+                console.log(`Лето`);
+                break;
+            case (day > 240 && day <= 270):
+                console.log(`Сентябрь`);
+                console.log(`Осень`);
+                break;
+            case (day > 270 && day <= 300):
+                console.log(`Октярь`);
+                console.log(`Осень`);
+                break;
+            case (day > 300 && day <= 330):
+                console.log(`Ноябрь`);
+                console.log(`Осень`);
+                break;
+        }
+    </script>
+</body>
+</html>
